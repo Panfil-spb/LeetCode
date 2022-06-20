@@ -6,9 +6,10 @@ class Solution:
         max = 0
         for i in range(len(s)):
             while j < len(s):
-                if len(set(s[i:j+1])) == len(s[i:j+1]):
-                    if len(s[i:j+1]) > max:
-                        max = len(s[i:j+1])
+                sub = s[i:j+1]
+                if len(set(sub)) == len(sub):
+                    if len(sub) > max:
+                        max = len(sub)
                     j += 1
                 else:
                     t = j
