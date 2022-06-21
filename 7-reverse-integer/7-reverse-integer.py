@@ -5,6 +5,8 @@ class Solution:
         while xs > 0:
             res = res * 10 + xs % 10
             xs //= 10
+            if res >= (2 ** 31):
+                return 0
         
         if x >= 0:
             if res > (2 ** 31) - 1:
