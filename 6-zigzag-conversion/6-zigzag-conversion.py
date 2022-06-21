@@ -3,19 +3,17 @@ class Solution:
         if numRows == 1:
             return s
         
-        res = [[] for i in range(numRows)]
+        res = ["" for i in range(numRows)]
         
         i = 0
         step = 1
         for el in s:
-            res[i].append(el)
+            res[i] += el
             i += step
             if i == 0 or i == numRows - 1:
                 step *= -1
-        st = ""
-        for j in res:
-            for k in j:
-                st += k
+        st = "".join(el for el in res)
+
         return st
             
         
