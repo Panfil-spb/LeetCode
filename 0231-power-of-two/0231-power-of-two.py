@@ -10,3 +10,4 @@ class Solution(object):
                 return True
             else:
                 power += 1
+        return False
